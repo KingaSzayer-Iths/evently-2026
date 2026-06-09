@@ -150,20 +150,136 @@
   </div>
 </section>
 
+<section class="search-section content-grid">
+  <div class="search-section__inner">
 
+    <h2>Hitta rätt evenemang</h2>
 
-        Hitta rätt evenemang
+    <form class="search-form">
 
-        Sökord
-        Kategori
-        Alla kategorier
-        Konsert
-        Marknad
-        Workshop
-        Familj
-        Sport / Hälsa
-        Datum
+      <div class="form-group">
+        <label for="keyword">Sökord</label>
+        <input
+          type="text"
+          id="keyword"
+          placeholder="Sök på t.ex. konsert, yoga..."
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="category">Kategori</label>
+
+        <select id="category">
+          <option>Alla kategorier</option>
+          <option>Konsert</option>
+          <option>Marknad</option>
+          <option>Workshop</option>
+          <option>Familj</option>
+          <option>Sport / Hälsa</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Datum</label>
+        <input type="date" id="date">
+      </div>
+
+      <button class="button">
         Sök evenemang
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+<section class="events content-grid">
+  <div class="events__header">
+    <h2>Populära evenemang</h2>
+
+    <a href="#" class="events__link">
+      Se alla evenemang →
+    </a>
+  </div>
+
+  <div class="events__grid">
+
+    <article class="event-card">
+      <img src="https://picsum.photos/id/20/600/400" alt="Konsert">
+
+      <div class="event-card__content">
+        <span class="event-card__category">Konsert</span>
+
+        <h3>Indie Night med Nova Sun</h3>
+
+        <p>Pustervik, Göteborg</p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <img src="https://picsum.photos/id/1040/600/400" alt="Marknad">
+
+      <div class="event-card__content">
+        <span class="event-card__category">Marknad</span>
+
+        <h3>Vårmarknad i Slottsskogen</h3>
+
+        <p>Slottsskogen, Göteborg</p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <img src="https://picsum.photos/id/1060/600/400" alt="Workshop">
+
+      <div class="event-card__content">
+        <span class="event-card__category">Workshop</span>
+
+        <h3>Keramikkurs för nybörjare</h3>
+
+        <p>Studio Lera, Göteborg</p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <img src="https://picsum.photos/id/1074/600/400" alt="Familj">
+
+      <div class="event-card__content">
+        <span class="event-card__category">Familj</span>
+
+        <h3>Barnteater</h3>
+
+        <p>Folkteatern, Göteborg</p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <img src="https://picsum.photos/id/1011/600/400" alt="Sport">
+
+      <div class="event-card__content">
+        <span class="event-card__category">Sport</span>
+
+        <h3>Morgonlöpning & frukost</h3>
+
+        <p>Slottsskogen, Göteborg</p>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <img src="https://picsum.photos/id/1080/600/400" alt="Konsert">
+
+      <div class="event-card__content">
+        <span class="event-card__category">Konsert</span>
+
+        <h3>Jazzkväll på Vasateatern</h3>
+
+        <p>Vasateatern, Göteborg</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
 
         Populära evenemang
         Se alla evenemang
@@ -198,6 +314,8 @@
         Konsert
         3 juni
         Vasateatern, Göteborg
+
+
 
 
         Gratis & prisvärt
