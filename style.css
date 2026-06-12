@@ -406,6 +406,30 @@ p {
     background: light-dark(#ffffff, #1f1f1f);  */
 }
 
+.event-card__image {
+    position: relative;
+}
+
+.event-card__favorite {
+    position: absolute;
+    inset-block-start: 1rem;
+    inset-inline-end: 1rem;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+.event-card__favorite:hover,
+.event-card__favorite:focus-visible {
+    color: #ff5c8a;
+    transform: scale(1.1);
+}
+
 .event-card img {
     inline-size: 100%;
     block-size: 14rem;
