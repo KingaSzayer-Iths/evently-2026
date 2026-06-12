@@ -179,7 +179,7 @@ p {
 }
 
 .header__inner {
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -190,6 +190,23 @@ p {
     font-family: var(--font-poppins);
     font-weight: 700;
     font-size: 1.5rem;
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-button {
+    background: none;
+    border: 0;
+    color: var(--purple-600);
+    cursor: pointer;
+}
+
+.button--small {
+    display: inline-block;
 }
 
 .menu-toggle {
@@ -203,7 +220,10 @@ p {
 }
 
 .nav {
-    position: absolute;
+    position: static;
+    display: block;
+
+    /* position: absolute; */
     inset-block-start: 100%;
     inset-inline-start: 0;
     inline-size: 100%;
@@ -222,8 +242,11 @@ p {
 }
 
 .nav__list {
-    display: grid;
-    gap: 1rem;
+    display: flex;
+    gap: 2rem;
+
+    /* display: grid;
+    gap: 1rem; */
 }
 
 .nav__list a {
@@ -406,10 +429,12 @@ p {
     background: light-dark(#ffffff, #1f1f1f);  */
 }
 
+/* hjärt bildcontainern */
 .event-card__image {
     position: relative;
 }
 
+/* hjärtknappen */
 .event-card__favorite {
     position: absolute;
     inset-block-start: 1rem;
@@ -697,13 +722,20 @@ select:focus-visible {
     .footer__contact {
         grid-column: auto;
     }
-
 }
 
 
 @media (min-width: 1024px) {
     .hamburger {
         display: none;
+    }
+
+    .button--small {
+        display: inline-block;
+    }
+
+    .header__actions {
+        order: 3;
     }
 
     .nav {
