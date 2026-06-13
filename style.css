@@ -173,6 +173,25 @@ p {
 }
 
 
+/* Skip-link */
+.skip-link {
+    position: absolute;
+    inset-block-start: -100px;
+    inset-inline-start: 1rem;
+
+    background: var(--purple-600);
+    color: var(--white);
+
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    inset-block-start: 1rem;
+}
+
 /* Header */
 .header {
     padding-block: 1.5rem;
@@ -237,7 +256,8 @@ p {
     z-index: 10;
 }
 
-.menu-toggle:checked~.nav {
+/* Visar navigationen när checkboxen är ikryssad. */
+.menu-toggle:checked~.nav { /* Väljer nav-elementet som kommer efter checkboxen. */
     display: block;
 }
 
@@ -299,7 +319,7 @@ p {
 
 /* Hero */
 .hero {
-    padding-block: clamp(3rem, 6vw, 6rem);
+    padding-block: clamp(3rem, 6vw, 6rem); /* Responsiv padding ovanför och under hero-sektionen. */
 }
 
 .hero__inner {
@@ -325,7 +345,7 @@ p {
 .hero h1 {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 700;
-    margin-block-end: 1rem;
+    margin-block-end: 1rem; /* avstånd under elementet. */
 }
 
 .hero p {
@@ -347,8 +367,8 @@ p {
 }
 
 .hero__images img {
-    inline-size: 100%;
-    block-size: clamp(7rem, 25vw, 16rem);
+    inline-size: 100%; /* Tar upp hela bredden. */
+    block-size: clamp(7rem, 25vw, 16rem); /* Responsiv höjd som anpassas efter skärmstorleken. */
     object-fit: cover;
     border-radius: 0.75rem;
 }
@@ -515,14 +535,25 @@ p {
 
 .feature__icon {
     inline-size: 4rem;
+    /* Sätter elementets bredd till 4rem. */
     block-size: 4rem;
+    /* Sätter elementets höjd till 4rem. */
     display: grid;
     place-items: center;
     margin-inline: auto;
+    /* Centrerar elementet horisontellt. */
     margin-block-end: 1rem;
+    /* Skapar avstånd under elementet. */
     border-radius: 50%;
-    background: #d8efe2;
+    background: light-dark(#d8efe2,
+            var(--gray-600));
+    /* background: #d8efe2; */
     font-size: 1.75rem;
+}
+
+.feature__icon svg {
+    color: light-dark(var(--emerald-800),
+            var(--white));
 }
 
 .feature h3 {
@@ -797,12 +828,12 @@ select:focus-visible {
     }
 
     .feature__icon {
-        flex-shrink: 0;
+        flex-shrink: 0; /* Förhindrar att elementet krymper när utrymmet blir mindre. */
         margin: 0;
     }
 
     .feature p {
         margin: 0;
-        max-inline-size: 16rem;
+        max-inline-size: 16rem; /* Begränsar elementets maximala bredd till 16rem. */
     }
 }
